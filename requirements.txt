@@ -1,0 +1,18 @@
+# EMCare / EMPIRA — TimesNet (implementación corregida A1)
+# Dependencias CORE: necesarias para ejecutar el pipeline de clasificación
+# corregido y las validaciones de tests/ (salvo el benchmark del paper).
+# Versiones probadas entre paréntesis; se fijan mínimos por compatibilidad.
+
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+scipy>=1.10
+joblib>=1.3
+tqdm>=4.65
+matplotlib>=3.7          # requerido por timesnet/utils/tools.py
+
+# PyTorch (CPU). Para GPU, instalar la rueda CUDA correspondiente desde pytorch.org
+torch>=2.0
+
+# Solo para el benchmark del paper (tests/benchmark_heartbeat.py)
+aeon>=0.9                 # descarga datasets UEA de clasificación

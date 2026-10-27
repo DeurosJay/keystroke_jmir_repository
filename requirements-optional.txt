@@ -1,0 +1,19 @@
+# Dependencias OPCIONALES — NO necesarias para el pipeline de clasificación A1
+# ni para las validaciones. Las usan módulos periféricos del repositorio.
+
+# Ingesta desde base de datos (src/database/, timesnet/database_run.py)
+pymongo
+sshtunnel
+patoolib
+
+# Explicabilidad (src/explicability/)
+captum
+
+# Familias de modelos alternativas incluidas en timesnet/layers/ pero NO usadas
+# por TimesNet (Autoformer, ETSformer, Reformer, Mamba, wavelets…)
+einops
+reformer_pytorch
+sympy
+pywt          # PyWavelets
+statsmodels
+arch

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Artefactos de experimentos / modelos
+checkpoints/
+test_results/
+model/
+modelo_final/
+*.pth
+*.pkl
+*.pt
+
+# Datos (nunca versionar datos clínicos)
+*.csv
+*.parquet
+*.xlsx
+*.npz
+data/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Sistema / IDE
+.DS_Store
+.idea/
+.vscode/
