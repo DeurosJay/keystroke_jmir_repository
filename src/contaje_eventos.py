@@ -92,7 +92,10 @@ def build_variable_windows_for_keys(args, df_raw, features, keys_subset, normali
     df_raw['Date_CDP'] = pd.to_datetime(df_raw['Date_CDP'])
     df_raw['weekday'] = df_raw['date'].dt.weekday
 
-    # Mismo preprocesado GLOBAL que en entrenamiento (antes de generar ventanas)
+    # Evaluation preprocessing: NaN/inf imputed with the whole-dataset mean, then the
+    # training normalizer is applied. Note: the retrained model used training-set means
+    # for imputation (exp_classification.py, FIX L1). The reported metrics were
+    # computed with this script.
     df_raw[features] = df_raw[features].replace([np.inf, -np.inf], np.nan)
     df_raw[features] = df_raw[features].fillna(df_raw[features].mean())
 

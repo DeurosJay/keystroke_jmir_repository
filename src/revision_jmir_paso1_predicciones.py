@@ -49,9 +49,8 @@ NPZ_CANDIDATES = [
     SRC_DIR / "resultados_eval" / "resultados_eval.npz",
 ]
 
-# Imputación de NaN/inf (solo modo "modelo"; en modo "npz" se usa la de contaje_eventos.py = media global)
-#   "train_mean"  -> media de TRAIN (= normalizer.mean), como exp_classification.py corregido [FIX L1]
-#   "global_mean" -> media de todo el CSV, como contaje_eventos.py
+# NaN/inf imputation. "global_mean" reproduces the evaluation script used for the
+# reported metrics (contaje_eventos.py); "train_mean" matches model training (FIX L1).
 IMPUTACION = "global_mean"
 BATCH_SIZE = 1024
 
